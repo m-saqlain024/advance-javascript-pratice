@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // implicit conversion
+        // this is a automatically convert in to string 
+
+        // alert(9)
+        let a =10;
+        let b = a.toString()
+        document.getElementById("demo").innerHTML= b + "  this is  converted into string"
+
+        let c = String(a)
+        let d = c + 1212
+ 
+        document.write(typeof(d) + " this is a value " + d )
+
+    </script>
+</body>
+</html>
