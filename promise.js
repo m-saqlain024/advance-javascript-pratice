@@ -36,9 +36,33 @@ function addNewInfo(post){
 // addNewInfo({fullname : "being murshid"}).then(getAllInfo).catch(err => console.log(err))
 
 
-const promise1 = new Promise.resolve("hello world ")
-const promise2 = 12;
-const promise3 = new Promise((resolve , reject)=> setTimeout (resolve , 2000 , "good Bye "));
+// const promise1 = new Promise.resolve("hello world ")
+// const promise2 = 12;
+// const promise3 = new Promise((resolve , reject)=> setTimeout (resolve , 2000 , "good Bye "));
 
-Promise.all([promise1, promise2,promise3]).then(value => console.log(value))
+// Promise.all([promise1, promise2,promise3]).then(value => console.log(value))
 
+
+
+
+const promise4 = fetch("https://jsonplaceholder.typicode.com/todos/1").then(rep => rep.json());
+console.log(promise4)
+
+function displayData(data){
+    document.getElementById("demo").innerHTML=data
+}
+
+const prom = new Promise((resolve , reject)=>{
+    let = 0 
+    if(x==0){
+        resolve("ok")
+    }else{
+        reject('error')
+    }
+
+})
+
+prom.then(
+    value => {displayData(value)};
+    error => {displayData(error)}
+)
